@@ -1,1 +1,1 @@
-## Node + Express API
+## Node + Express Auth API
