@@ -6,7 +6,21 @@ import generateToken from "../utils/generateToken.js";
 // route    POST /api/v1/users/auth
 // @access  Public
 const authUser = asyncHandler(async (req, res) => {
-  res.status(200).json({ message: "Auth user" });
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email });
+
+  if (user && (await user.matchPasswords(password))) {
+    generateToken(res, user._id);
+    res.status(201).json({
+      _id: user._id,
+      name: user.name,
+      email: user.email,
+    });
+  } else {
+    res.status(401);
+    throw new Error("Invalid email or password");
+  }
 });
 
 // @desc    Register User/create user token
