@@ -1,7 +1,12 @@
+import Header from "./components/Header";
+
 const App = () => {
-  return ( 
-    <div>Node + Express Auth API</div>
-   );
-}
- 
+  return (
+    <>
+    <Header />
+      <div>Node + Express Auth API</div>
+    </>
+  );
+};
+
 export default App;
