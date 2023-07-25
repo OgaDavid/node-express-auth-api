@@ -14,7 +14,7 @@ const authUser = asyncHandler(async (req, res) => {
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
-  // check if user exists
+  //check if user exists
   const userExists = await User.findOne({ email });
 
   if (userExists) {
@@ -22,7 +22,7 @@ const registerUser = asyncHandler(async (req, res) => {
     throw new Error("User already exists");
   }
 
-  //   if user does not exist, create user
+  //if user does not exist already, create user
   const user = await User.create({
     name,
     email,
