@@ -1,5 +1,5 @@
 import express from "express";
-import { notFound, errorHa } from "./middleware/errorMiddleware.js";
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
 import dotenv from "dotenv";
 dotenv.config();
 
