@@ -1,10 +1,14 @@
+import { Container } from "react-bootstrap";
 import Header from "./components/Header";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <>
-    <Header />
-      <div>Node + Express Auth API</div>
+      <Header />
+      <Container className="my-2">
+        <Outlet />
+      </Container>
     </>
   );
 };
