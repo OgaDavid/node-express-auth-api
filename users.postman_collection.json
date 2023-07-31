@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "a42ff25c-bf55-4f4f-b13f-9d4fb7ab6b94",
+		"name": "users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24890074"
+	},
+	"item": [
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/users/auth?email=oga@gamil.com&password=oga",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"users",
+						"auth"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "oga@gamil.com"
+						},
+						{
+							"key": "password",
+							"value": "oga"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "oga",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "oga@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "oga",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}/users",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/users/logout",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Profile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/users/profile",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Profile",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/users/profile",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
